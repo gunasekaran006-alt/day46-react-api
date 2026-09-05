@@ -6,7 +6,8 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     // useEffect(() => { // mount
-    //     fetch("https://dummyjson.com/products").then(response => {
+    //     fetch("https://dummyjson.com/products")
+    //      .then(response => {
     //         return response.json();
     //     }).then(data => {
     //         setProducts(data);
@@ -32,9 +33,9 @@ function Products() {
 
                 {
                     products.map(data => (
-                        <div 
-                        className='bg-white rounded-2xl shadow-md p-4 flex flex-col'
-                         key={data.id}>
+                        <div
+                            className='bg-white rounded-2xl shadow-md p-4 flex flex-col'
+                            key={data.id}>
                             <div className='h-40 flex items-center justify-center'>
                                 <img className='h-full object-contain' src={data.thumbnail} alt="" />
                             </div>
